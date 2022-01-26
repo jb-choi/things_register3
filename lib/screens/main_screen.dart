@@ -30,8 +30,8 @@ class _MainScreen extends State<MainScreen> {
       ),
       bottomNavigationBar: BottomNavigationBar(
         type : BottomNavigationBarType.fixed,
-        backgroundColor: Colors.blueAccent,
-        selectedItemColor: Colors.white ,
+        backgroundColor: Colors.white,
+        selectedItemColor: Colors.blueAccent,
         unselectedItemColor: Colors.black,
         iconSize: 30,
         selectedFontSize: 14,

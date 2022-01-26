@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:things_register3/screens/main_screen.dart';
     
 void main() async{
-  runApp(ThingsRegister());
+  runApp(const ThingsRegister());
 }
 
 class ThingsRegister extends StatelessWidget {
@@ -15,7 +15,7 @@ class ThingsRegister extends StatelessWidget {
      theme: ThemeData(
         primarySwatch: Colors.blue
      ),
-     home: MainScreen(),
+     home: const MainScreen(),
     );
   }
 }
