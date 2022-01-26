@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:things_register3/screens/main_screen.dart';
+import 'package:things_register3/screens/onboarding_screen.dart';
+import 'package:shared_preferences/shared_preferences.dart';
     
 void main() async{
+  WidgetsFlutterBinding.ensureInitialized();
+  // bool status =await SharedPreferences.getInstance().getBool('isLoggedIn');
+
   runApp(const ThingsRegister());
 }
 
@@ -15,7 +20,8 @@ class ThingsRegister extends StatelessWidget {
      theme: ThemeData(
         primarySwatch: Colors.blue
      ),
-     home: const MainScreen(),
+     // home: const MainScreen(),
+      home: OnBoardingScreen(),
     );
   }
 }
