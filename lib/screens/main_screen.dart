@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:things_register3/screens/things_registration_screen.dart';
 
 
 class MainScreen extends StatefulWidget {
   const MainScreen({Key? key}) : super(key: key);
-
+  
   @override
   _MainScreen createState() => _MainScreen();
 }
