@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "446352681803",
+    "project_id": "things-register3",
+    "storage_bucket": "things-register3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:446352681803:android:a35e1b93a7aeb5d9cb96ce",
+        "android_client_info": {
+          "package_name": "com.slowbird.things_register3"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "446352681803-2de9fmcs6dmdtabkmr316d0sotc02gn1.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDmec5omuWW526uvvdst7dBZYVeitWHdmE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "446352681803-2de9fmcs6dmdtabkmr316d0sotc02gn1.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
