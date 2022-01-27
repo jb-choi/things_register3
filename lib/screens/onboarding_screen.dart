@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:introduction_screen/introduction_screen.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:things_register3/screens/main_screen.dart';
+import 'package:things_register3/util/preference_class.dart';
 import 'package:things_register3/widgets/button_widget.dart';
-import 'dart:async';
 
 class OnBoardingScreen extends StatelessWidget {
   const OnBoardingScreen({Key? key}) : super(key: key);
@@ -37,8 +36,9 @@ class OnBoardingScreen extends StatelessWidget {
             decoration: getPageDecoration(),
             footer: ButtonWidget(
               text: '물건 관리 시작하기!',
-              onClicked: () {
+              onClicked: () async {
                 // SharedPreferences.getInstance().setBool('isOnboardingScreen',true);
+                UserPreferences.setOnboardingScreenChk();
                 goToHome(context);
                 },
             ),
@@ -61,9 +61,15 @@ class OnBoardingScreen extends StatelessWidget {
     ),
   );
 
+
   void goToHome(context) => Navigator.of(context).pushReplacement(
     MaterialPageRoute(builder: (_) => MainScreen()),
   );
+
+  // setBooleanValue(String key, bool value) async {
+  // SharedPreferences myPrefs = await SharedPreferences.getInstance();
+  // myPrefs.setBool(key, value);
+  // }
 
   Widget buildImage(String path) =>
       Center(child: Image.asset(path, width: 350,));
@@ -88,5 +94,48 @@ class OnBoardingScreen extends StatelessWidget {
 
 }
 
-
+// //class
+// class MySharedPreferences {
+//   MySharedPreferences._privateConstructor();
+//
+//   static final MySharedPreferences instance =
+//   MySharedPreferences._privateConstructor();
+//   setBooleanValue(String key, bool value) async {
+//     SharedPreferences myPrefs = await SharedPreferences.getInstance();
+//     myPrefs.setBool(key, value);
+//   }
+//
+//   Future<bool> getBooleanValue(String key) async {
+//     SharedPreferences myPrefs = await SharedPreferences.getInstance();
+//     return myPrefs.getBool(key) ?? false;
+//   }
+// }
+//
+// //on pressed
+// MySharedPreferences.instance
+//     .setBooleanValue("isfirstRun", true);
+//
+// //main app
+// class MyAppState extends State<MyApp> {
+//   // This widget is the root of your application.
+//
+//   bool isLoggedIn = false;
+//
+//   MyAppState() {
+//     MySharedPreferences.instance
+//         .getBooleanValue("isfirstRun")
+//         .then((value) => setState(() {
+//       isLoggedIn = value;
+//     }));
+//   }
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return MaterialApp(
+//         debugShowCheckedModeBanner: false,
+//         title: 'Flutter Demo',
+//         //if true return intro screen for first time Else go to login Screen
+//         home: isLoggedIn ? Login() : IntroScreen());
+//   }
+// }
 

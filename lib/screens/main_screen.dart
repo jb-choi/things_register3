@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:things_register3/screens/home_screen.dart';
 import 'package:things_register3/screens/things_registration_screen.dart';
 
 
@@ -12,11 +13,12 @@ class MainScreen extends StatefulWidget {
 class _MainScreen extends State<MainScreen> {
   int currentIndex = 0;
   final screens = [
-    const Center(child: Text('홈', style: TextStyle(fontSize:60))),
+    HomeScreen(),
     const Center(child: Text('물건등록', style: TextStyle(fontSize:60))),
     const Center(child: Text('물건리스트', style: TextStyle(fontSize:60))),
     const Center(child: Text('마이페이지', style: TextStyle(fontSize:60))),
   ];
+
 
   @override
   Widget build(BuildContext context) {
